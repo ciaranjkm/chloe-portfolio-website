@@ -1,2 +1,2 @@
-# chloe-portfolio-website
+# Chloe's Portfolio Website
  Simple portfolio website.
