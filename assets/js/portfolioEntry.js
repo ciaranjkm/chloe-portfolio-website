@@ -22,9 +22,16 @@ class portfolioEntry{
         this.imageTwo.id =(this.entryID+"2")
         this.imageThree.id = (this.entryID+"3")
 
-        this.imageOne.src="../assets/images/Portfolio/"+this.entryID+"1.png"
-        this.imageTwo.src="../assets/images/Portfolio/"+this.entryID+"2.png"
-        this.imageThree.src="../assets/images/Portfolio/"+this.entryID+"3.png"        
+        console.log(this.entryID)
+
+        this.imageOne.src="./assets/images/Portfolio/"+this.entryID+"1.png"
+        this.imageTwo.src="./assets/images/Portfolio/"+this.entryID+"2.png"
+        this.imageThree.src="./assets/images/Portfolio/"+this.entryID+"3.png"    
+        
+        this.imageOne.alt="Unable to load images."
+        this.imageTwo.alt="Unable to load images."
+        this.imageThree.alt="Unable to load images."
+        
     }
 }
 
@@ -46,9 +53,15 @@ function createPortfolioEntries(){
         newEntryDiv.appendChild(newEntry.imageThree)
 
         count++
-    }
-    document.body.insertBefore(newEntryDiv, document.getElementById("portfolio_footer"))
+
+        document.body.insertBefore(newEntryDiv, document.getElementById("portfolio_footer"))
+    } 
 }
+
+var fs = require('fs'); fs.readdir( 'path/to/your/folder', (error, files) => { 
+    let totalFiles = files.length; // return the number of files
+    console.log(totalFiles); // print the total number of files
+ })
 
 
 

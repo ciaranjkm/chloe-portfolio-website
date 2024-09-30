@@ -5,12 +5,14 @@
     </head>
     <body onload="createPortfolioEntries()">
         <div class="header" id="portfolio_header">
-            <h1 class="headerItem" id="portfolio_title">
-                <a href="index.html">Chloe Ryan</a>              
-            </h1>
-
-            <div class="headerItem" id="index_navBar">
-                <ul class="navBarContents" id="index_navBarContents">
+            <nav class="navTitle" id="portfolio_navTitle">
+                <h1 class="headerItem" id="portfolio_title">
+                    <a href="index.html">Chloe Ryan</a>              
+                </h1>    
+            </nav>
+            
+            <nav class="navContainer" id="portfolio_navContainer">
+                <ul class="navBarContents" id="portfolio_navBarContents">
                     <li class="navBarItem">
                         <a href="index.html">Home</a>
                     </li>
@@ -21,20 +23,22 @@
                         <a href="contact.html">Contact Me</a>
                     </li>
                 </ul>
-            </div>
+            </nav>
         </div>
 
         
 
         <div class="footer" id="portfolio_footer">
-            <a class="instagramLogo" href="https://www.instagram.com" target="_blank">
-                <img class="instagramLogoImage" id="portfolio_instagramLogoImage" src="./assets/images/Other Images/instagram48.png">
-                <p>Instagram</p>
-            </a>
-            <a class="linkedinLogo" href="https://linkedin.com" target="_blank">
-                <img class="linkedinLogoImage" id="portfolio_linkedinLogoImage" src="./assets/images/Other Images/linkedin48.png">
-                <p>Linkedin</p>
-            </a>
+            <nav class="socialLogos" id="portfolio_socialLogos">
+                <a class="instagramLogo" href="https://www.instagram.com" target="_blank">
+                    <img class="instagramLogoImage" id="portfolio_instagramLogoImage" src="./assets/images/Other Images/instagram48.png">
+                    <p>Instagram</p>
+                </a>
+                <a class="linkedinLogo" href="https://linkedin.com" target="_blank">
+                    <img class="linkedinLogoImage" id="portfolio_linkedinLogoImage" src="./assets/images/Other Images/linkedin48.png">
+                    <p>Linkedin</p>
+                </a>
+            </nav>     
         </div>
     </body>
 </html>
