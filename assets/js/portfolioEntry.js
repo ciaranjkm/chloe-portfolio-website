@@ -5,7 +5,7 @@ class portfolioEntry{
         this.imageOne = document.createElement("img")
         this.imageTwo = document.createElement("img")
         this.imageThree = document.createElement("img")
-        this.caption = document.createElement("p")
+        this.caption = document.createElement("a")
         this.entryID = String
 
         this.imageOne.classList.add("portfolioImage")
@@ -19,23 +19,45 @@ class portfolioEntry{
 
     setCaption(eID) //Captions can be changed here. Write captions in speech marks.
     {
-        const captions = [
-            "caption for image 0", // id 0
-            "caption for image 1", // id 1
-            "caption for image 2", // id 2
-            "caption for image 3", // id 3
-            "caption for image 4", // id 4
-            "caption for image 5"  // id 5
+        const captionsText = [
+            "this is the caption text", // id 0
+            "", // id 1
+            "", // id 2
+            "", // id 3
+            "", // id 4
+            ""  // id 5
         ]
-        
-        this.caption.textContent = captions[eID]
+        const captionLinks = [
+            "", // optional links to add for credits.
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+     
+        var p = document.createElement("p")
+        p.textContent = captionsText[eID]
+
+        if(captionLinks[eID] == "")
+        {
+            this.caption.append(p)
+        }
+        else
+        {
+            this.caption.setAttribute('href', captionLinks[eID])
+            this.caption.setAttribute('target', "_blank")
+            this.caption.append(p)
+        }
+        console.log(this.caption)
+
         this.caption.classList.add("portfolioEntryCaption")
     }
 
     populateImages(){
-        this.imageOne.id = (this.entryID+"1")
-        this.imageTwo.id =(this.entryID+"2")
-        this.imageThree.id = (this.entryID+"3")
+        this.imageOne.setAttribute('id', this.entryID+"1")
+        this.imageTwo.setAttribute('id', this.entryID+"2")
+        this.imageThree.setAttribute('id', this.entryID+"3")
 
         this.imageOne.src="./assets/images/Portfolio/"+this.entryID+"1.png"
         this.imageTwo.src="./assets/images/Portfolio/"+this.entryID+"2.png"
@@ -44,43 +66,47 @@ class portfolioEntry{
 }
 
 function createPortfolioEntries(){
-    let newEntryDiv
+    let newEntryDiv = document.createElement("div")
 
-    const mCW = document.createElement("div")    
+    let mCW = document.createElement("div")    
+    mCW.classList.add("portfolioEntry")
 
     let count = 0
     while(count < 1){ //CHANGE THIS NUMBER TO CHANGE THE AMOUNT OF ENTRIES ON THE PAGE (will not create entries with less than 3 images and a caption.)
         console.log("creating entries.")
-        newEntryDiv = document.createElement("div")
-        newEntryDiv.classList.add("portfolioEntryDiv")
-
         let newEntry = new portfolioEntry()
 
         newEntry.setEntryID(count.toString())
-        newEntry.setCaption(count.toString())
+        newEntry.setCaption(count.toString());
+        
         newEntry.populateImages()
+        console.log(newEntry.imageOne, newEntry.imageTwo, newEntry.imageThree)
 
         if(newEntry.imageOne.height != 0)
         {
+            console.log("check")
             if(newEntry.imageTwo.height != 0)
             {
                 if(newEntry.imageThree.height != 0)
                 {
-                    if(newEntry.caption.textContent != "")
+                    if(newEntry.caption.firstChild.textContent != "")
                     {
+                        console.log("check")
                         newEntryDiv.appendChild(newEntry.imageOne)
                         newEntryDiv.appendChild(newEntry.imageTwo)
                         newEntryDiv.appendChild(newEntry.imageThree)
                         newEntryDiv.appendChild(newEntry.caption)              
         
-                        mCW.appendChild(newEntryDiv)
+                        mCW.append(newEntryDiv)
                     }                    
                 }                   
             }
         }//This is disgusting....
 
         console.log(mCW)
-        document.body.insertBefore(mCW, document.getElementById("portfolio_footer"))
+        let divToAddTo = document.getElementById('mainContentWindow_portfolio')
+        divToAddTo.append(mCW)
+        
         count++  
     } 
 }
