@@ -1,46 +1,74 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <script type="text/javascript" src="./assets/js/portfolioEntry.js"></script>
-    </head>
-    <body onload="createPortfolioEntries()">
-        <div class="header" id="portfolio_header">
-            <nav class="navTitle" id="portfolio_navTitle">
-                <h1 class="headerItem" id="portfolio_title">
-                    <a href="index.html">Chloe Ryan</a>              
-                </h1>    
-            </nav>
-            
-            <nav class="navContainer" id="portfolio_navContainer">
-                <ul class="navBarContents" id="portfolio_navBarContents">
-                    <li class="navBarItem">
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li class="navBarItem">
-                        <a href="portfolio.html">Portfolio</a>
-                    </li>
-                    <li class="navBarItem"> 
-                        <a href="contact.html">Contact Me</a>
-                    </li>
-                </ul>
-            </nav>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/css/portfolio.css" rel="stylesheet">
+    <link href="./assets/css/mainLayout.css" rel="stylesheet">
+    <script src="./assets/js/imageslider.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="headerBar">
+        <h1 class="headerText">
+            <a href="index.html">CHLOE RYAN</a>
+        </h1>
+        <ul class="navBar">
+            <li><a class="navBarLink" href="index.html">Home</a></li>
+            <li><a class="navBarLink" href="#">Assisting Portfolio</a></li>
+            <li><a class="navBarLink" href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="mainContent">
+        <div class="portfolioEntry">
+            <div class="portfolioEntry-content">
+                <div class="portfolioEntry-imagesandcaption">
+                    <div class="portfolioEntry-images" id="sliderParent">
+                        <img src="./assets/images/Portfolio/melania peluso shoot/2.jpg" draggable="false">
+                        <img src="./assets/images/Portfolio/melania peluso shoot/1.jpg" draggable="false">
+                        <img src="./assets/images/Portfolio/melania peluso shoot/5.jpg" draggable="false">
+                        <img src="./assets/images/Portfolio/melania peluso shoot/8.jpg" draggable="false">
+                        <img src="./assets/images/Portfolio/melania peluso shoot/3.jpg" draggable="false">
+                        <img src="./assets/images/Portfolio/melania peluso shoot/4.jpg" draggable="false">
+                        <img src="./assets/images/Portfolio/melania peluso shoot/7.jpg" draggable="false">
+                        <img src="./assets/images/Portfolio/melania peluso shoot/6.jpg" draggable="false">
+                    </div>
+                    <p class="portfolioEntry-caption">This is the caption for the images.</p>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <div class="mainContentWindow" id="mainContentWindow_portfolio" onload="createPortfolioEntries()">
-
-        </div>
-
-        
-
-        <div class="footer" id="portfolio_footer">
-            <nav class="socialLogos" id="portfolio_socialLogos">
-                <a class="instagramLogo" href="https://www.instagram.com" target="_blank">
-                    <img class="instagramLogoImage" id="portfolio_instagramLogoImage" src="./assets/images/Other Images/instagram48.png">
+    <div class="footerBar">
+        <div class="footerBar-contact">
+            <div class="footerBar-item">
+                <a class="footerBar-image" href="https://www.instagram.com">
+                    <img src="./assets/images/Other Images/instagram.png">
                 </a>
-                <a class="linkedinLogo" href="https://linkedin.com" target="_blank">
-                    <img class="linkedinLogoImage" id="portfolio_linkedinLogoImage" src="./assets/images/Other Images/linkedin48.png">
+                <a class="footerBar-link" href="https://instagram.com">
+                    Instagram
                 </a>
-            </nav>     
+            </div>
+            <div class="footerBar-item">
+                <a class="footerBar-image" href="https://www.linkedin.com">
+                    <img src="./assets/images/Other Images/linkedin.png">
+                </a>
+                <a class="footerBar-link" href="https://linkedin.com">
+                    Linkedin
+                </a>
+            </div>
         </div>
-    </body>
+        <div class="footerBar-devCredit">
+            <div class="footerBar-item">
+                <a class="footerBar-link" href="https://linkedin.com">
+                    This page was designed by Ciaran
+                </a>
+                <a class="footerBar-image" href="https://github.com">
+                    <img src="./assets/images/Other Images/github.png">
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
