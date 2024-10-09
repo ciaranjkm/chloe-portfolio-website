@@ -1,0 +1,52 @@
+.mainContent{
+    display: block;
+    max-height: 83vh;
+    height: 83vh;
+    justify-content: center;
+    align-items: center;
+}
+.aboutMe{
+    height: 80%;
+    max-height: 80%;
+
+    max-width: 55vw;
+    display: flex;
+    gap: 1vw;
+}
+.aboutMe-title{
+    margin: 0;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 4vw;
+    width: 10%;
+    height: fit-content;
+    justify-self: flex-start;
+}
+.aboutMe-imageandtext{
+    display: flex;
+    gap: 1vh;
+    max-height: 100%;
+    max-width: 100%;
+}
+.aboutMe-image{
+    height: 100%;
+    max-height: 100%;
+
+    width: 40%;
+    max-width: 40%;
+}
+.aboutMe-image img{
+    object-fit: contain;
+    max-height: 110%;
+    max-width: 110%;
+}
+.aboutMe-text{
+    max-width: 20vw;
+    width: 20vw;
+
+    max-height: 100%;
+    font-size: calc(0.75vw + 0.75vh)
+}
+.aboutMe-text p{
+    margin: 0;
+}

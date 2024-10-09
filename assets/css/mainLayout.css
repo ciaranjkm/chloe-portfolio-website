@@ -1,0 +1,115 @@
+html{
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+}
+body{
+    background-color: #fbe8e2;
+
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    font-family: barlowRegular;
+}
+h1{
+    margin: 0;
+
+    font-size: 5vw;
+    font-family: barlowCondensed;
+}
+
+h1 a:hover{
+    color: #000;
+}
+ul{
+    margin: 0;
+
+    list-style-type: none;
+    display: flex;
+    gap: 1vw;
+
+    font-size: 1.75vw;
+    margin-left: 1%;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    color: #a9a9a9;
+    font-weight: bold;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+    max-height: 100vh;
+}
+
+
+.headerBar{
+    height: 10vh;
+    max-height: 10vh;
+    margin-left: 1vw;
+    padding-top: 1vw;
+
+    display: flex;
+    align-items: center;
+}
+.mainContent{
+    display: flex;
+}
+.footerBar{
+    justify-self: end;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 5vh;
+    max-height: 5vh;
+
+    margin-left: 1vw;
+    margin-right: 1vw;
+
+    font-size: 0.75vw;
+}
+.footerBar-image img{
+    max-width: 2vw;
+    width: 2vw;
+}
+.footerBar-contact{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+.footerBar-devCredit{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+.footerBar-item{
+    display: flex;
+    align-items: center;
+    gap: 0.25vw;
+}
+
+@font-face {
+    font-family: barlowRegular;
+    src: url("../fonts/Barlow-Regular.ttf");
+}
+@font-face {
+    font-family: barlowCondensed;
+    src: url("../fonts/BarlowCondensed-Regular.ttf");
+}
+

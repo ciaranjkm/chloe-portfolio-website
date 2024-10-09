@@ -1,0 +1,23 @@
+.mainContent{
+    justify-content: center;
+    align-items: center;
+
+    max-height: 83vh;
+    height: 83vh;
+}
+.mainContent-box{
+    display: flex;
+    gap: 0.5vh;
+    margin: 0;
+
+    justify-content: flex-start;
+    align-items: center;
+}
+.mainContent-box p{
+    font-size: 2vw;
+}
+.mainContent-box h2{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 3vw;
+}
